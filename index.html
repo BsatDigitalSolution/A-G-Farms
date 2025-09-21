@@ -1,0 +1,1306 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>A & G Farms - Premium Agricultural Services</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <!-- Language Selector -->
+    <div class="language-selector">
+      <button class="language-btn active" data-lang="en" onclick="switchLanguage('en')">EN</button>
+      <button class="language-btn" data-lang="yo" onclick="switchLanguage('yo')">YO</button>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+      <div class="nav-container">
+        <div class="logo">A & G Farms</div>
+        <nav>
+          <ul class="nav-menu">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#products">Products</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#testimonials">Reviews</a></li>
+            <li><a href="#team">Team</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+        <div style="display: flex; align-items: center; gap: 1rem">
+          <div class="cart-icon" onclick="toggleCart()">
+            🛒
+            <span class="cart-count" id="cartCount">0</span>
+          </div>
+          <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+      <ul>
+        <li><a href="#home" onclick="toggleMobileMenu()">Home</a></li>
+        <li><a href="#services" onclick="toggleMobileMenu()">Services</a></li>
+        <li><a href="#products" onclick="toggleMobileMenu()">Products</a></li>
+        <li><a href="#gallery" onclick="toggleMobileMenu()">Gallery</a></li>
+        <li><a href="#testimonials" onclick="toggleMobileMenu()">Reviews</a></li>
+        <li><a href="#team" onclick="toggleMobileMenu()">Team</a></li>
+        <li><a href="#faq" onclick="toggleMobileMenu()">FAQ</a></li>
+        <li><a href="#contact" onclick="toggleMobileMenu()">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+      <div class="floating-element floating-1">🐔</div>
+      <div class="floating-element floating-2">🌾</div>
+      <div class="floating-element floating-3">🐟</div>
+
+      <div class="hero-content">
+        <h1 data-en="A & G Farms" data-yo="A & G Farms">A & G Farms</h1>
+        <p
+          class="hero-subtitle"
+          data-en="Premium Agricultural Services & Quality Farm Products"
+          data-yo="Awọn iṣẹ Ogbin Pataki & Awọn ọja Ọgbin Didara"
+        >
+          Premium Agricultural Services & Quality Farm Products
+        </p>
+        <p
+          data-en="Your trusted partner for poultry farming, consultancy, and quality agricultural products in Ota, Ogun State"
+          data-yo="Alabaṣepọ igbẹkẹle rẹ fun ọsin adie, igbimọ, ati awọn ọja ogbin didara ni Ota, Ipinlẹ Ogun"
+        >
+          Your trusted partner for poultry farming, consultancy, and quality
+          agricultural products in Ota, Ogun State
+        </p>
+        <div class="cta-buttons">
+          <a
+            href="#services"
+            class="btn btn-primary"
+            data-en="Our Services"
+            data-yo="Awọn Iṣẹ Wa"
+            >Our Services</a
+          >
+          <a
+            href="#contact"
+            class="btn btn-secondary"
+            data-en="Get In Touch"
+            data-yo="Kan Si Wa"
+            >Get In Touch</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+      <div class="container">
+        <h2 class="section-title" data-en="Our Services" data-yo="Awọn Iṣẹ Wa">
+          Our Services
+        </h2>
+        <div class="services-grid">
+          <div class="service-card fade-in">
+            <span class="service-icon">🐔</span>
+            <h3 data-en="Poultry Farming" data-yo="Ọsin Adie">
+              Poultry Farming
+            </h3>
+            <p
+              data-en="We provide high-quality birds and comprehensive poultry farming solutions."
+              data-yo="A pese awọn ẹiyẹ didara giga ati awọn ojutu ọsin adie okeerẹ."
+            >
+              We provide high-quality birds and comprehensive poultry farming
+              solutions.
+            </p>
+            <ul class="service-list">
+              <li>Noilers</li>
+              <li>Broilers</li>
+              <li>Cockerels</li>
+              <li>Foreign Turkey</li>
+              <li>Local Turkey</li>
+              <li>Layers</li>
+            </ul>
+            <button
+              class="btn btn-primary btn-small"
+              onclick="bookService('poultry')"
+              data-en="Book Service"
+              data-yo="Gba Iṣẹ"
+            >
+              Book Service
+            </button>
+          </div>
+
+          <div class="service-card fade-in">
+            <span class="service-icon">🏗️</span>
+            <h3 data-en="Poultry Pen Setup" data-yo="Eto Ago Adie">
+              Poultry Pen Setup
+            </h3>
+            <p
+              data-en="Professional pen construction and setup services for optimal bird health and productivity."
+              data-yo="Ikole ago alamọdaju ati awọn iṣẹ eto fun ilera ẹyẹ ti o dara julọ ati iṣelọpọ."
+            >
+              Professional pen construction and setup services for optimal bird
+              health and productivity.
+            </p>
+            <ul class="service-list">
+              <li data-en="Custom pen design" data-yo="Apẹrẹ ago adani">
+                Custom pen design
+              </li>
+              <li
+                data-en="Modern ventilation systems"
+                data-yo="Awọn eto afẹfẹ igbalode"
+              >
+                Modern ventilation systems
+              </li>
+              <li
+                data-en="Feeding and watering systems"
+                data-yo="Awọn eto ifunni ati omi"
+              >
+                Feeding and watering systems
+              </li>
+              <li data-en="Biosecurity measures" data-yo="Awọn igbese aabo aye">
+                Biosecurity measures
+              </li>
+            </ul>
+            <button
+              class="btn btn-primary btn-small"
+              onclick="bookService('pen-setup')"
+              data-en="Get Quote"
+              data-yo="Gba Idiyele"
+            >
+              Get Quote
+            </button>
+          </div>
+
+          <div class="service-card fade-in">
+            <span class="service-icon">👨‍🏫</span>
+            <h3 data-en="Farm Consultancy" data-yo="Igbimọ Oko">
+              Farm Consultancy
+            </h3>
+            <p
+              data-en="Expert advice and guidance for successful poultry farming operations."
+              data-yo="Imọran alamọja ati itọsọna fun awọn iṣẹ ọsin adie aṣeyọri."
+            >
+              Expert advice and guidance for successful poultry farming
+              operations.
+            </p>
+            <ul class="service-list">
+              <li data-en="Farm management" data-yo="Iṣakoso oko">
+                Farm management
+              </li>
+              <li data-en="Disease prevention" data-yo="Idiwọ arun">
+                Disease prevention
+              </li>
+              <li data-en="Feed optimization" data-yo="Imudarasi ounjẹ">
+                Feed optimization
+              </li>
+              <li
+                data-en="Profit maximization strategies"
+                data-yo="Awọn ọgbọn ere pọju"
+              >
+                Profit maximization strategies
+              </li>
+            </ul>
+            <button
+              class="btn btn-primary btn-small"
+              onclick="bookService('consultancy')"
+              data-en="Book Consultation"
+              data-yo="Gba Igbimọ"
+            >
+              Book Consultation
+            </button>
+          </div>
+
+          <div class="service-card fade-in">
+            <span class="service-icon">🌾</span>
+            <h3 data-en="Ofada Rice" data-yo="Iresi Ofada">Ofada Rice</h3>
+            <p
+              data-en="Premium quality Ofada rice packaging and distribution services."
+              data-yo="Iṣe ipọ ati pinpin iresi Ofada didara giga."
+            >
+              Premium quality Ofada rice packaging and distribution services.
+            </p>
+            <ul class="service-list">
+              <li data-en="Authentic local rice" data-yo="Iresi agbegbe otitọ">
+                Authentic local rice
+              </li>
+              <li data-en="Quality packaging" data-yo="Ipọ didara">
+                Quality packaging
+              </li>
+              <li data-en="Bulk distribution" data-yo="Pinpin nla">
+                Bulk distribution
+              </li>
+              <li
+                data-en="Retail packages available"
+                data-yo="Awọn apoti titaja wa"
+              >
+                Retail packages available
+              </li>
+            </ul>
+            <button
+              class="btn btn-primary btn-small"
+              onclick="viewProduct('ofada-rice')"
+              data-en="View Products"
+              data-yo="Wo Awọn Ọja"
+            >
+              View Products
+            </button>
+          </div>
+
+          <div class="service-card fade-in">
+            <span class="service-icon">🐟</span>
+            <h3 data-en="Smoked Catfish" data-yo="Eja Aro Ti A Sin">
+              Smoked Catfish
+            </h3>
+            <p
+              data-en="Fresh, expertly smoked catfish with traditional smoking techniques."
+              data-yo="Eja aro tutu ti a sin pẹlu awọn ilana sini ibile."
+            >
+              Fresh, expertly smoked catfish with traditional smoking
+              techniques.
+            </p>
+            <ul class="service-list">
+              <li data-en="Fresh catfish" data-yo="Eja aro tutu">
+                Fresh catfish
+              </li>
+              <li
+                data-en="Traditional smoking process"
+                data-yo="Ilana sini ibile"
+              >
+                Traditional smoking process
+              </li>
+              <li data-en="Hygienic packaging" data-yo="Ipọ mimọ">
+                Hygienic packaging
+              </li>
+              <li
+                data-en="Wholesale and retail"
+                data-yo="Titaja nla ati kekere"
+              >
+                Wholesale and retail
+              </li>
+            </ul>
+            <button
+              class="btn btn-primary btn-small"
+              onclick="viewProduct('catfish')"
+              data-en="Order Now"
+              data-yo="Paṣẹ Bayi"
+            >
+              Order Now
+            </button>
+          </div>
+
+          <div class="service-card fade-in">
+            <span class="service-icon">🍌</span>
+            <h3 data-en="Plantain Chips" data-yo="Chips Ọgẹdẹ">
+              Plantain Chips
+            </h3>
+            <p
+              data-en="Crispy, delicious plantain chips made from premium quality plantains."
+              data-yo="Chips ọgẹdẹ gbigbẹ, aladun ti a ṣe lati ọgẹdẹ didara giga."
+            >
+              Crispy, delicious plantain chips made from premium quality
+              plantains.
+            </p>
+            <ul class="service-list">
+              <li data-en="Premium plantains" data-yo="Ọgẹdẹ pataki">
+                Premium plantains
+              </li>
+              <li data-en="Crispy texture" data-yo="Iṣan gbigbẹ">
+                Crispy texture
+              </li>
+              <li data-en="Natural ingredients" data-yo="Awọn eroja adayeba">
+                Natural ingredients
+              </li>
+              <li
+                data-en="Various package sizes"
+                data-yo="Awọn iwọn apoti oriṣiriṣi"
+              >
+                Various package sizes
+              </li>
+            </ul>
+            <button
+              class="btn btn-primary btn-small"
+              onclick="viewProduct('plantain-chips')"
+              data-en="Buy Now"
+              data-yo="Ra Bayi"
+            >
+              Buy Now
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="products">
+      <div class="container">
+        <h2 class="section-title" data-en="Our Products" data-yo="Awọn Ọja Wa">
+          Our Products
+        </h2>
+
+        <div class="product-filters">
+          <button
+            class="filter-btn active"
+            data-filter="all"
+            data-en="All Products"
+            data-yo="Gbogbo Ọja"
+            onclick="filterProducts('all')"
+          >
+            All Products
+          </button>
+          <button
+            class="filter-btn"
+            data-filter="poultry"
+            data-en="Poultry"
+            data-yo="Adie"
+            onclick="filterProducts('poultry')"
+          >
+            Poultry
+          </button>
+          <button
+            class="filter-btn"
+            data-filter="food"
+            data-en="Food Products"
+            data-yo="Awọn Ọja Ounjẹ"
+            onclick="filterProducts('food')"
+          >
+            Food Products
+          </button>
+          <button
+            class="filter-btn"
+            data-filter="supplies"
+            data-en="Farm Supplies"
+            data-yo="Awọn Ohun Elo Oko"
+            onclick="filterProducts('supplies')"
+          >
+            Farm Supplies
+          </button>
+        </div>
+
+        <div class="products-grid" id="productsGrid">
+          <!-- Poultry Products -->
+          <div class="product-card" data-category="poultry">
+            <div class="product-image">🐔</div>
+            <div
+              class="stock-status in-stock"
+              data-en="In Stock"
+              data-yo="Wa Ninu Oja"
+            >
+              In Stock
+            </div>
+            <div class="product-info">
+              <div
+                class="product-price"
+                data-en="From ₦150,000"
+                data-yo="Lati ₦150,000"
+              >
+                From ₦150,000
+              </div>
+              <div
+                class="product-description"
+                data-en="Complete poultry pen construction and setup service"
+                data-yo="Iṣẹ ikole ati eto ago adie pipe"
+              >
+                Complete poultry pen construction and setup service
+              </div>
+              <div class="product-actions">
+                <button
+                  class="btn btn-primary btn-small"
+                  onclick="bookService('pen-setup')"
+                  data-en="Get Quote"
+                  data-yo="Gba Idiyele"
+                >
+                  Get Quote
+                </button>
+                <button
+                  class="btn btn-secondary btn-small"
+                  onclick="bookConsultation()"
+                  data-en="Free Consultation"
+                  data-yo="Igbimọ Ọfẹ"
+                >
+                  Free Consultation
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery">
+      <div class="container">
+        <h2 class="section-title" data-en="Our Gallery" data-yo="Ile Aworan Wa">
+          Our Gallery
+        </h2>
+
+        <div class="gallery-tabs">
+          <button
+            class="gallery-tab active"
+            data-gallery="all"
+            data-en="All Photos"
+            data-yo="Gbogbo Aworan"
+            onclick="filterGallery('all')"
+          >
+            All Photos
+          </button>
+          <button
+            class="gallery-tab"
+            data-gallery="farm"
+            data-en="Farm Operations"
+            data-yo="Iṣẹ Oko"
+            onclick="filterGallery('farm')"
+          >
+            Farm Operations
+          </button>
+          <button
+            class="gallery-tab"
+            data-gallery="products"
+            data-en="Products"
+            data-yo="Awọn Ọja"
+            onclick="filterGallery('products')"
+          >
+            Products
+          </button>
+          <button
+            class="gallery-tab"
+            data-gallery="facilities"
+            data-en="Facilities"
+            data-yo="Awọn Ohun Elo"
+            onclick="filterGallery('facilities')"
+          >
+            Facilities
+          </button>
+          <button
+            class="gallery-tab"
+            data-gallery="team"
+            data-en="Our Team"
+            data-yo="Ẹgbẹ Wa"
+            onclick="filterGallery('team')"
+          >
+            Our Team
+          </button>
+        </div>
+
+        <div class="gallery-grid" id="galleryGrid">
+          <div class="gallery-item" data-gallery-category="farm">
+            🐔🏠
+            <div
+              class="gallery-caption"
+              data-en="Modern poultry housing facility"
+              data-yo="Ile adie igbalode"
+            >
+              Modern poultry housing facility
+            </div>
+          </div>
+          <div class="gallery-item" data-gallery-category="products">
+            🌾📦
+            <div
+              class="gallery-caption"
+              data-en="Ofada rice packaging process"
+              data-yo="Ilana ipọ iresi Ofada"
+            >
+              Ofada rice packaging process
+            </div>
+          </div>
+          <div class="gallery-item" data-gallery-category="farm">
+            🐟🔥
+            <div
+              class="gallery-caption"
+              data-en="Traditional fish smoking process"
+              data-yo="Ilana sini eja ibile"
+            >
+              Traditional fish smoking process
+            </div>
+          </div>
+          <div class="gallery-item" data-gallery-category="facilities">
+            🏗️⚙️
+            <div
+              class="gallery-caption"
+              data-en="Pen construction in progress"
+              data-yo="Ikole ago ti n lọ"
+            >
+              Pen construction in progress
+            </div>
+          </div>
+          <div class="gallery-item" data-gallery-category="products">
+            🍌✨
+            <div
+              class="gallery-caption"
+              data-en="Fresh plantain chips production"
+              data-yo="Iṣelọpọ chips ọgẹdẹ titun"
+            >
+              Fresh plantain chips production
+            </div>
+          </div>
+          <div class="gallery-item" data-gallery-category="team">
+            👨‍🌾👩‍🌾
+            <div
+              class="gallery-caption"
+              data-en="Our experienced farm team"
+              data-yo="Ẹgbẹ oko wa ti o ni iriri"
+            >
+              Our experienced farm team
+            </div>
+          </div>
+          <div class="gallery-item" data-gallery-category="farm">
+            🦃🌱
+            <div
+              class="gallery-caption"
+              data-en="Turkey breeding program"
+              data-yo="Eto ibi tọlọtọlọ"
+            >
+              Turkey breeding program
+            </div>
+          </div>
+          <div class="gallery-item" data-gallery-category="facilities">
+            💧⚡
+            <div
+              class="gallery-caption"
+              data-en="Automated feeding and watering system"
+              data-yo="Eto ifunni ati omi adaṣe"
+            >
+              Automated feeding and watering system
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+      <div class="container">
+        <h2
+          class="section-title"
+          data-en="What Our Customers Say"
+          data-yo="Kini Awọn Onibara Wa Sọ"
+        >
+          What Our Customers Say
+        </h2>
+
+        <div class="testimonials-slider">
+          <div class="testimonial-card">
+            <div class="stars">⭐⭐⭐⭐⭐</div>
+            <div
+              class="testimonial-quote"
+              data-en="A & G Farms provided excellent broiler chickens for my restaurant. The quality is consistently outstanding and delivery is always on time. Highly recommended!"
+              data-yo="A & G Farms pese adie broiler to dara julọ fun ile ounjẹ mi. Didara naa dara nigbagbogbo ati ifiranṣẹ ni akoko. Mo ṣeduro rẹ!"
+            >
+              "A & G Farms provided excellent broiler chickens for my
+              restaurant. The quality is consistently outstanding and delivery
+              is always on time. Highly recommended!"
+            </div>
+            <div class="testimonial-author">
+              <div class="author-avatar">MR</div>
+              <div class="author-info">
+                <h4>Mr. Rahman Okoye</h4>
+                <p data-en="Restaurant Owner, Lagos" data-yo="Onile Ounjẹ, Eko">
+                  Restaurant Owner, Lagos
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="stars">⭐⭐⭐⭐⭐</div>
+            <div
+              class="testimonial-quote"
+              data-en="Their Ofada rice is the best I've tasted! Perfect quality and packaging. My customers always ask for more. Great business partner!"
+              data-yo="Iresi Ofada wọn ni ti o dara julọ ti mo ti tọ! Didara pipe ati ipọ. Awọn onibara mi nigbagbogbo beere fun diẹ sii. Alabaṣepọ iṣowo nla!"
+            >
+              "Their Ofada rice is the best I've tasted! Perfect quality and packaging. My customers always ask for more. Great business partner!"
+            </div>
+            <div class="testimonial-author">
+              <div class="author-avatar">AA</div>
+              <div class="author-info">
+                <h4>Mrs. Adunni Afolabi</h4>
+                <p data-en="Food Vendor, Ibadan" data-yo="Olutaja Ounjẹ, Ibadan">
+                  Food Vendor, Ibadan
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="stars">⭐⭐⭐⭐⭐</div>
+            <div
+              class="testimonial-quote"
+              data-en="Excellent farm consultancy services! They helped me set up my poultry farm and provided ongoing support. My birds are healthy and productive."
+              data-yo="Awọn iṣẹ igbimọ oko ti o dara julọ! Wọn ran mi lọwọ lati ṣeto oko ọsin adie mi ati pese atilẹyin ti n lọ. Awọn ẹiyẹ mi ni ilera ati elomiran."
+            >
+              "Excellent farm consultancy services! They helped me set up my poultry farm and provided ongoing support. My birds are healthy and productive."
+            </div>
+            <div class="testimonial-author">
+              <div class="author-avatar">OB</div>
+              <div class="author-info">
+                <h4>Mr. Olumide Balogun</h4>
+                <p data-en="Farmer, Ogun State" data-yo="Agbe, Ipinlẹ Ogun">
+                  Farmer, Ogun State
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="faq">
+      <div class="container">
+        <h2 class="section-title" data-en="Frequently Asked Questions" data-yo="Awọn Ibeere Ti A Saba Beere">
+          Frequently Asked Questions
+        </h2>
+
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFAQ(this)">
+            <span data-en="What types of birds do you supply?" data-yo="Iru awọn ẹiyẹ wo ni ẹ n pese?">What types of birds do you supply?</span>
+            <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-answer">
+            <p data-en="We supply a wide range of poultry including broilers, layers, noilers, cockerels, and both local and foreign turkeys. All our birds are healthy, vaccinated, and ready for various farming purposes." data-yo="A pese ọpọlọpọ awọn ẹyẹ pẹlu broilers, layers, noilers, cockerels, ati awọn tọlọtọlọ agbegbe ati ajeji mejeeji. Gbogbo awọn ẹyẹ wa ni ilera, ti a ti ṣe ajẹsara, ati ti setan fun awọn idi ogbin oriṣiriṣi.">We supply a wide range of poultry including broilers, layers, noilers, cockerels, and both local and foreign turkeys. All our birds are healthy, vaccinated, and ready for various farming purposes.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFAQ(this)">
+            <span data-en="Do you provide delivery services?" data-yo="Ṣe ẹ pese awọn iṣẹ ifiranṣẹ?">Do you provide delivery services?</span>
+            <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-answer">
+            <p data-en="Yes, we provide reliable delivery services within Ogun State and neighboring areas. Delivery charges depend on distance and order size. Contact us for specific delivery arrangements." data-yo="Bẹẹni, a pese awọn iṣẹ ifiranṣẹ igbẹkẹle laarin Ipinlẹ Ogun ati awọn agbegbe adugbo. Awọn idiyele ifiranṣẹ da lori ijinna ati iwọn aṣẹ. Kan si wa fun awọn eto ifiranṣẹ pato.">Yes, we provide reliable delivery services within Ogun State and neighboring areas. Delivery charges depend on distance and order size. Contact us for specific delivery arrangements.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFAQ(this)">
+            <span data-en="What is included in your poultry pen setup service?" data-yo="Kini o wa ninu iṣẹ eto ago adie yin?">What is included in your poultry pen setup service?</span>
+            <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-answer">
+            <p data-en="Our pen setup service includes custom design, construction, ventilation systems, feeding and watering systems, and biosecurity measures. We provide complete turnkey solutions tailored to your specific needs and budget." data-yo="Iṣẹ eto ago wa pẹlu apẹrẹ adani, ikole, awọn eto afẹfẹ, awọn eto ifunni ati omi, ati awọn igbese aabo aye. A pese awọn ojutu turnkey pipe ti a ṣe ni ibamu si awọn iwulo pato rẹ ati isuna.">Our pen setup service includes custom design, construction, ventilation systems, feeding and watering systems, and biosecurity measures. We provide complete turnkey solutions tailored to your specific needs and budget.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFAQ(this)">
+            <span data-en="How can I place an order?" data-yo="Bawo ni mo ṡe le gbe aṣẹ kan?">How can I place an order?</span>
+            <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-answer">
+            <p data-en="You can place orders through our website, call us directly, or visit our farm location. We recommend calling ahead for large orders to ensure availability. Payment methods include cash, bank transfer, and mobile money." data-yo="O le gbe awọn aṣẹ nipasẹ oju opo wẹẹbu wa, pe wa taara, tabi ṣabẹwo si ipo oko wa. A ṣeduro pipe fun awọn aṣẹ nla lati rii daju wiwà. Awọn ọna isanwo pẹlu owo, gbigbe banki, ati owo alagbeka.">You can place orders through our website, call us directly, or visit our farm location. We recommend calling ahead for large orders to ensure availability. Payment methods include cash, bank transfer, and mobile money.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFAQ(this)">
+            <span data-en="Do you offer farm management training?" data-yo="Ṣe ẹ n funni ni ikẹkọ iṣakoso oko?">Do you offer farm management training?</span>
+            <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-answer">
+            <p data-en="Yes, we provide comprehensive farm management training covering bird care, disease prevention, feeding strategies, and business management. Training can be conducted at our facility or your location." data-yo="Bẹẹni, a pese ikẹkọ iṣakoso oko okeerẹ ti o bo itọju ẹyẹ, idiwọ arun, awọn ọgbọn ifunni, ati iṣakoso iṣowo. Ikẹkọ le ṣe ni ile-iṣẹ wa tabi ipo rẹ.">Yes, we provide comprehensive farm management training covering bird care, disease prevention, feeding strategies, and business management. Training can be conducted at our facility or your location.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="team">
+      <div class="container">
+        <h2 class="section-title" data-en="Meet Our Team" data-yo="Pade Ẹgbẹ Wa">
+          Meet Our Team
+        </h2>
+
+        <div class="team-grid">
+          <div class="team-member">
+            <div class="member-photo">AG</div>
+            <div class="member-name">Mr. Adebayo Gabriel</div>
+            <div class="member-role" data-en="Founder & CEO" data-yo="Oludasile & Oludari">Founder & CEO</div>
+            <div class="member-bio" data-en="With over 15 years of experience in poultry farming and agricultural business, Adebayo leads A & G Farms with passion and expertise." data-yo="Pẹlu iriri ti o ju ọdun 15 lọ ni ọsin adie ati iṣowo ogbin, Adebayo ṣe amọna A & G Farms pẹlu itara ati imọ.">
+              With over 15 years of experience in poultry farming and agricultural business, Adebayo leads A & G Farms with passion and expertise.
+            </div>
+          </div>
+
+          <div class="team-member">
+            <div class="member-photo">GO</div>
+            <div class="member-name">Mrs. Grace Omotayo</div>
+            <div class="member-role" data-en="Operations Manager" data-yo="Alakoso Iṣẹ">Operations Manager</div>
+            <div class="member-bio" data-en="Grace oversees daily operations and ensures quality standards are maintained across all our products and services." data-yo="Grace ṣe akoso awọn iṣẹ ojoojumọ ati rii daju pe awọn ipilẹ didara ti wa ni ipamọ ni gbogbo awọn ọja ati awọn iṣẹ wa.">
+              Grace oversees daily operations and ensures quality standards are maintained across all our products and services.
+            </div>
+          </div>
+
+          <div class="team-member">
+            <div class="member-photo">FO</div>
+            <div class="member-name">Dr. Folake Ogundimu</div>
+            <div class="member-role" data-en="Veterinary Consultant" data-yo="Igbimọ Ẹranko">Veterinary Consultant</div>
+            <div class="member-bio" data-en="Dr. Folake provides expert veterinary care and health management advice to ensure the wellbeing of all our livestock." data-yo="Dokita Folake pese itọju ẹranko alamọja ati imọran iṣakoso ilera lati rii daju alafia gbogbo awọn ẹranko wa.">
+              Dr. Folake provides expert veterinary care and health management advice to ensure the wellbeing of all our livestock.
+            </div>
+          </div>
+
+          <div class="team-member">
+            <div class="member-photo">TA</div>
+            <div class="member-name">Mr. Tunde Adeyemi</div>
+            <div class="member-role" data-en="Farm Supervisor" data-yo="Alabojuto Oko">Farm Supervisor</div>
+            <div class="member-bio" data-en="Tunde supervises field operations and coordinates with our team to ensure efficient farm management and productivity." data-yo="Tunde ṣe abojuto awọn iṣẹ aaye ati ṣe ajọṣe pẹlu ẹgbẹ wa lati rii daju iṣakoso oko daradara ati iṣelọpọ.">
+              Tunde supervises field operations and coordinates with our team to ensure efficient farm management and productivity.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section class="certifications">
+      <div class="container">
+        <h2 class="section-title" data-en="Our Certifications & Standards" data-yo="Awọn Iwe-ẹri Wa & Awọn Ipilẹ">
+          Our Certifications & Standards
+        </h2>
+
+        <div class="cert-grid">
+          <div class="cert-item">
+            <div class="cert-icon">🏆</div>
+            <h3 data-en="Quality Assurance" data-yo="Idaniloju Didara">Quality Assurance</h3>
+            <p data-en="ISO certified quality management" data-yo="Iṣakoso didara ti ISO ti fọwọsi">ISO certified quality management</p>
+          </div>
+
+          <div class="cert-item">
+            <div class="cert-icon">🛡️</div>
+            <h3 data-en="Food Safety" data-yo="Aabo Ounjẹ">Food Safety</h3>
+            <p data-en="HACCP compliant processes" data-yo="Awọn ilana ti o ni ibamu HACCP">HACCP compliant processes</p>
+          </div>
+
+          <div class="cert-item">
+            <div class="cert-icon">🌱</div>
+            <h3 data-en="Organic Farming" data-yo="Ogbin Adayeba">Organic Farming</h3>
+            <p data-en="Certified organic practices" data-yo="Awọn iṣe adayeba ti a fọwọsi">Certified organic practices</p>
+          </div>
+
+          <div class="cert-item">
+            <div class="cert-icon">💚</div>
+            <h3 data-en="Animal Welfare" data-yo="Alafia Ẹranko">Animal Welfare</h3>
+            <p data-en="Ethical animal treatment standards" data-yo="Awọn ipilẹ itọju ẹranko ti o tọ">Ethical animal treatment standards</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter">
+      <div class="container">
+        <h2 data-en="Stay Updated with A & G Farms" data-yo="Wa Ni Imudojuiwọn Pẹlu A & G Farms">
+          Stay Updated with A & G Farms
+        </h2>
+        <p data-en="Subscribe to our newsletter for the latest updates on products, services, and farming tips" data-yo="Forukọsilẹ si iwe iroyin wa fun awọn imudojuiwọn tuntun lori awọn ọja, awọn iṣẹ, ati awọn imọran ogbin">
+          Subscribe to our newsletter for the latest updates on products, services, and farming tips
+        </p>
+        <form class="newsletter-form" onsubmit="subscribeNewsletter(event)">
+          <input
+            type="email"
+            class="newsletter-input"
+            placeholder="Enter your email address"
+            data-en-placeholder="Enter your email address"
+            data-yo-placeholder="Tẹ adirẹsi imeeli rẹ sii"
+            required
+          />
+          <button type="submit" class="newsletter-btn" data-en="Subscribe" data-yo="Forukọsilẹ">
+            Subscribe
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+      <div class="container">
+        <div class="contact-content">
+          <div class="contact-info">
+            <h2 data-en="Get In Touch" data-yo="Kan Si Wa">Get In Touch</h2>
+            <p data-en="Ready to start your farming journey or need quality agricultural products? Contact us today!" data-yo="Ti o ti setan lati bẹrẹ irin-ajo ogbin rẹ tabi nilo awọn ọja ogbin didara? Kan si wa loni!">
+              Ready to start your farming journey or need quality agricultural products? Contact us today!
+            </p>
+
+            <div class="contact-item">
+              <div class="contact-icon">📍</div>
+              <div>
+                <h4 data-en="Our Location" data-yo="Ipo Wa">Our Location</h4>
+                <p>123 Farm Road, Ota, Ogun State, Nigeria</p>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon">📞</div>
+              <div>
+                <h4 data-en="Phone Numbers" data-yo="Awọn Nọmba Foonu">Phone Numbers</h4>
+                <p>+234 803 123 4567<br>+234 706 789 0123</p>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon">✉️</div>
+              <div>
+                <h4 data-en="Email Address" data-yo="Adirẹsi Imeeli">Email Address</h4>
+                <p>info@agfarms.com.ng<br>sales@agfarms.com.ng</p>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon">🕒</div>
+              <div>
+                <h4 data-en="Business Hours" data-yo="Awọn Wakati Iṣowo">Business Hours</h4>
+                <p data-en="Mon - Fri: 8:00 AM - 6:00 PM<br>Sat: 8:00 AM - 4:00 PM<br>Sun: Closed" data-yo="Ọjọ Aje - Eti: 8:00 Owurọ - 6:00 Alẹ<br>Ọjọ Abamẹta: 8:00 Owurọ - 4:00 Alẹ<br>Ọjọ Aiku: Ti pa">
+                  Mon - Fri: 8:00 AM - 6:00 PM<br>Sat: 8:00 AM - 4:00 PM<br>Sun: Closed
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-form">
+            <h3 data-en="Send Us a Message" data-yo="Fi Ifiranṣẹ Ranṣẹ Si Wa">Send Us a Message</h3>
+            <form onsubmit="submitContactForm(event)">
+              <div class="form-group">
+                <label for="name" data-en="Full Name" data-yo="Orukọ Ni Kikun">Full Name</label>
+                <input type="text" id="name" name="name" required />
+              </div>
+
+              <div class="form-group">
+                <label for="email" data-en="Email Address" data-yo="Adirẹsi Imeeli">Email Address</label>
+                <input type="email" id="email" name="email" required />
+              </div>
+
+              <div class="form-group">
+                <label for="phone" data-en="Phone Number" data-yo="Nọmba Foonu">Phone Number</label>
+                <input type="tel" id="phone" name="phone" required />
+              </div>
+
+              <div class="form-group">
+                <label for="service" data-en="Service Interest" data-yo="Ifẹ Iṣẹ">Service Interest</label>
+                <select id="service" name="service" required>
+                  <option value="" data-en="Select a service..." data-yo="Yan iṣẹ kan...">Select a service...</option>
+                  <option value="poultry" data-en="Poultry Farming" data-yo="Ọsin Adie">Poultry Farming</option>
+                  <option value="pen-setup" data-en="Pen Setup" data-yo="Eto Ago">Pen Setup</option>
+                  <option value="consultancy" data-en="Farm Consultancy" data-yo="Igbimọ Oko">Farm Consultancy</option>
+                  <option value="ofada-rice" data-en="Ofada Rice" data-yo="Iresi Ofada">Ofada Rice</option>
+                  <option value="catfish" data-en="Smoked Catfish" data-yo="Eja Aro Ti A Sin">Smoked Catfish</option>
+                  <option value="chips" data-en="Plantain Chips" data-yo="Chips Ọgẹdẹ">Plantain Chips</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="message" data-en="Message" data-yo="Ifiranṣẹ">Message</label>
+                <textarea id="message" name="message" placeholder="Tell us about your needs..." data-en-placeholder="Tell us about your needs..." data-yo-placeholder="Sọ fun wa nipa awọn iwulo rẹ..." required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary" data-en="Send Message" data-yo="Fi Ifiranṣẹ Ranṣẹ">
+                Send Message
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Social Media Section -->
+    <section class="social-media">
+      <div class="container">
+        <h2 data-en="Connect With Us" data-yo="Darapọ Mọ Wa">Connect With Us</h2>
+        <p data-en="Follow us on social media for daily updates, tips, and community engagement" data-yo="Tẹle wa ni awọn media awujọ fun awọn imudojuiwọn ojoojumọ, awọn imọran, ati ajọṣepọ agbegbe">
+          Follow us on social media for daily updates, tips, and community engagement
+        </p>
+
+        <div class="social-links">
+          <a href="#" class="social-link facebook" title="Facebook">
+            👥
+          </a>
+          <a href="#" class="social-link instagram" title="Instagram">
+            📸
+          </a>
+          <a href="#" class="social-link twitter" title="Twitter">
+            🐦
+          </a>
+          <a href="#" class="social-link whatsapp" title="WhatsApp">
+            💬
+          </a>
+          <a href="#" class="social-link youtube" title="YouTube">
+            📺
+          </a>
+          <a href="#" class="social-link linkedin" title="LinkedIn">
+            💼
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3 data-en="About A & G Farms" data-yo="Nipa A & G Farms">About A & G Farms</h3>
+            <p data-en="Your trusted partner for premium agricultural services and quality farm products in Ota, Ogun State." data-yo="Alabaṣepọ igbẹkẹle rẹ fun awọn iṣẹ ogbin pataki ati awọn ọja oko didara ni Ota, Ipinlẹ Ogun.">
+              Your trusted partner for premium agricultural services and quality farm products in Ota, Ogun State.
+            </p>
+          </div>
+
+          <div class="footer-section">
+            <h3 data-en="Our Services" data-yo="Awọn Iṣẹ Wa">Our Services</h3>
+            <ul>
+              <li><a href="#services" data-en="Poultry Farming" data-yo="Ọsin Adie">Poultry Farming</a></li>
+              <li><a href="#services" data-en="Pen Setup" data-yo="Eto Ago">Pen Setup</a></li>
+              <li><a href="#services" data-en="Farm Consultancy" data-yo="Igbimọ Oko">Farm Consultancy</a></li>
+              <li><a href="#products" data-en="Quality Products" data-yo="Awọn Ọja Didara">Quality Products</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-section">
+            <h3 data-en="Quick Links" data-yo="Awọn Asopọ Kiakia">Quick Links</h3>
+            <ul>
+              <li><a href="#home" data-en="Home" data-yo="Ile">Home</a></li>
+              <li><a href="#gallery" data-en="Gallery" data-yo="Ile Aworan">Gallery</a></li>
+              <li><a href="#testimonials" data-en="Testimonials" data-yo="Awọn Ẹri">Testimonials</a></li>
+              <li><a href="#faq" data-en="FAQ" data-yo="Awọn Ibeere">FAQ</a></li>
+              <li><a href="#team" data-en="Our Team" data-yo="Ẹgbẹ Wa">Our Team</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-section">
+            <h3 data-en="Contact Info" data-yo="Alaye Ikanni">Contact Info</h3>
+            <p>📍 123 Farm Road, Ota, Ogun State</p>
+            <p>📞 +234 803 123 4567</p>
+            <p>✉️ info@agfarms.com.ng</p>
+            <p>🕒 Mon-Fri: 8AM-6PM</p>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p data-en="© 2024 A & G Farms. All rights reserved. | Designed with ❤️ for Nigerian farmers" data-yo="© 2024 A & G Farms. Gbogbo ẹtọ wa ni ipamọ. | Ti a ṣe pẹlu ❤️ fun awọn agbe Naijiria">
+            © 2024 A & G Farms. All rights reserved. | Designed with ❤️ for Nigerian farmers
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-sidebar" id="cartSidebar">
+      <div class="cart-header">
+        <h3 data-en="Shopping Cart" data-yo="Agbọn Rira">Shopping Cart</h3>
+        <button class="close-cart" onclick="toggleCart()">×</button>
+      </div>
+      <div id="cartItems">
+        <p data-en="Your cart is empty" data-yo="Agbọn rẹ ṣofo" style="text-align: center; color: #999; padding: 2rem;">Your cart is empty</p>
+      </div>
+      <div class="cart-total" id="cartTotal" style="display: none;">
+        <h4 data-en="Total: ₦0" data-yo="Lapapọ: ₦0">Total: ₦0</h4>
+        <button class="checkout-btn" onclick="checkout()" data-en="Proceed to Checkout" data-yo="Tẹsiwaju si Isanwo">
+          Proceed to Checkout
+        </button>
+      </div>
+    </div>
+
+    <!-- Chat Widget -->
+    <div class="chat-widget">
+      <button class="chat-btn" onclick="openWhatsApp()" title="Chat with us on WhatsApp">
+        💬
+      </button>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal" id="modal">
+      <div class="modal-content">
+        <button class="close-modal" onclick="closeModal()">×</button>
+        <div id="modalBody">
+          <!-- Modal content will be inserted here -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Notification -->
+    <div class="notification" id="notification"></div>
+
+    
+  </body>
+</html>-name"
+                data-en="Broiler Chickens"
+                data-yo="Adie Broiler"
+              >
+                Broiler Chickens
+              </div>
+              <div class="product-price">₦2,500 - ₦3,500</div>
+              <div
+                class="product-description"
+                data-en="High-quality broiler chickens, 6-8 weeks old, ready for market"
+                data-yo="Adie broiler didara giga, ọsẹ 6-8, ti setan fun ọja"
+              >
+                High-quality broiler chickens, 6-8 weeks old, ready for market
+              </div>
+              <div class="product-actions">
+                <button
+                  class="btn btn-primary btn-small"
+                  onclick="addToCart('broiler', 'Broiler Chickens', 3000)"
+                  data-en="Add to Cart"
+                  data-yo="Fi Kun Agbọn"
+                >
+                  Add to Cart
+                </button>
+                <button
+                  class="btn btn-secondary btn-small"
+                  onclick="quickOrder('broiler')"
+                  data-en="Quick Order"
+                  data-yo="Paṣẹ Kiakia"
+                >
+                  Quick Order
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-card" data-category="poultry">
+            <div class="product-image">🥚</div>
+            <div
+              class="stock-status in-stock"
+              data-en="In Stock"
+              data-yo="Wa Ninu Oja"
+            >
+              In Stock
+            </div>
+            <div class="product-info">
+              <div
+                class="product-name"
+                data-en="Layer Chickens"
+                data-yo="Adie Ẹyin"
+              >
+                Layer Chickens
+              </div>
+              <div class="product-price">₦3,000 - ₦4,000</div>
+              <div
+                class="product-description"
+                data-en="Point-of-lay chickens, excellent egg production capacity"
+                data-yo="Adie ti o ti ṣetan lati yin ẹyin, agbara iṣelọpọ ẹyin to dara"
+              >
+                Point-of-lay chickens, excellent egg production capacity
+              </div>
+              <div class="product-actions">
+                <button
+                  class="btn btn-primary btn-small"
+                  onclick="addToCart('layers', 'Layer Chickens', 3500)"
+                  data-en="Add to Cart"
+                  data-yo="Fi Kun Agbọn"
+                >
+                  Add to Cart
+                </button>
+                <button
+                  class="btn btn-secondary btn-small"
+                  onclick="quickOrder('layers')"
+                  data-en="Quick Order"
+                  data-yo="Paṣẹ Kiakia"
+                >
+                  Quick Order
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-card" data-category="poultry">
+            <div class="product-image">🦃</div>
+            <div
+              class="stock-status low-stock"
+              data-en="Low Stock"
+              data-yo="Kekere Ninu Oja"
+            >
+              Low Stock
+            </div>
+            <div class="product-info">
+              <div
+                class="product-name"
+                data-en="Turkey (Local)"
+                data-yo="Tọlọtọlọ (Agbegbe)"
+              >
+                Turkey (Local)
+              </div>
+              <div class="product-price">₦8,000 - ₦12,000</div>
+              <div
+                class="product-description"
+                data-en="Local breed turkeys, hardy and disease-resistant"
+                data-yo="Tọlọtọlọ iru agbegbe, to le oke si arun"
+              >
+                Local breed turkeys, hardy and disease-resistant
+              </div>
+              <div class="product-actions">
+                <button
+                  class="btn btn-primary btn-small"
+                  onclick="addToCart('turkey-local', 'Turkey Local', 10000)"
+                  data-en="Add to Cart"
+                  data-yo="Fi Kun Agbọn"
+                >
+                  Add to Cart
+                </button>
+                <button
+                  class="btn btn-secondary btn-small"
+                  onclick="quickOrder('turkey-local')"
+                  data-en="Pre-Order"
+                  data-yo="Paṣẹ Tẹlẹ"
+                >
+                  Pre-Order
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Food Products -->
+          <div class="product-card" data-category="food">
+            <div class="product-image">🌾</div>
+            <div
+              class="stock-status in-stock"
+              data-en="In Stock"
+              data-yo="Wa Ninu Oja"
+            >
+              In Stock
+            </div>
+            <div class="product-info">
+              <div
+                class="product-name"
+                data-en="Ofada Rice (5kg)"
+                data-yo="Iresi Ofada (5kg)"
+              >
+                Ofada Rice (5kg)
+              </div>
+              <div class="product-price">₦4,500</div>
+              <div
+                class="product-description"
+                data-en="Premium quality Ofada rice, locally grown and processed"
+                data-yo="Iresi Ofada didara giga, ti a gbin ati ṣe ni agbegbe"
+              >
+                Premium quality Ofada rice, locally grown and processed
+              </div>
+              <div class="product-actions">
+                <button
+                  class="btn btn-primary btn-small"
+                  onclick="addToCart('ofada-5kg', 'Ofada Rice 5kg', 4500)"
+                  data-en="Add to Cart"
+                  data-yo="Fi Kun Agbọn"
+                >
+                  Add to Cart
+                </button>
+                <button
+                  class="btn btn-secondary btn-small"
+                  onclick="quickOrder('ofada-5kg')"
+                  data-en="Buy Now"
+                  data-yo="Ra Bayi"
+                >
+                  Buy Now
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-card" data-category="food">
+            <div class="product-image">🐟</div>
+            <div
+              class="stock-status in-stock"
+              data-en="In Stock"
+              data-yo="Wa Ninu Oja"
+            >
+              In Stock
+            </div>
+            <div class="product-info">
+              <div
+                class="product-name"
+                data-en="Smoked Catfish (1kg)"
+                data-yo="Eja Aro Ti A Sin (1kg)"
+              >
+                Smoked Catfish (1kg)
+              </div>
+              <div class="product-price">₦3,200</div>
+              <div
+                class="product-description"
+                data-en="Freshly smoked catfish, naturally preserved with traditional methods"
+                data-yo="Eja aro ti a sin titun, ti a pamọ pẹlu awọn ọna ibile"
+              >
+                Freshly smoked catfish, naturally preserved with traditional
+                methods
+              </div>
+              <div class="product-actions">
+                <button
+                  class="btn btn-primary btn-small"
+                  onclick="addToCart('catfish-1kg', 'Smoked Catfish 1kg', 3200)"
+                  data-en="Add to Cart"
+                  data-yo="Fi Kun Agbọn"
+                >
+                  Add to Cart
+                </button>
+                <button
+                  class="btn btn-secondary btn-small"
+                  onclick="quickOrder('catfish-1kg')"
+                  data-en="Order Fresh"
+                  data-yo="Paṣẹ Titun"
+                >
+                  Order Fresh
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-card" data-category="food">
+            <div class="product-image">🍌</div>
+            <div
+              class="stock-status in-stock"
+              data-en="In Stock"
+              data-yo="Wa Ninu Oja"
+            >
+              In Stock
+            </div>
+            <div class="product-info">
+              <div
+                class="product-name"
+                data-en="Plantain Chips (500g)"
+                data-yo="Chips Ọgẹdẹ (500g)"
+              >
+                Plantain Chips (500g)
+              </div>
+              <div class="product-price">₦1,800</div>
+              <div
+                class="product-description"
+                data-en="Crispy plantain chips made from premium plantains, perfect snack"
+                data-yo="Chips ọgẹdẹ gbigbẹ ti a ṣe lati ọgẹdẹ pataki, ounjẹ ipanu pipe"
+              >
+                Crispy plantain chips made from premium plantains, perfect snack
+              </div>
+              <div class="product-actions">
+                <button
+                  class="btn btn-primary btn-small"
+                  onclick="addToCart('chips-500g', 'Plantain Chips 500g', 1800)"
+                  data-en="Add to Cart"
+                  data-yo="Fi Kun Agbọn"
+                >
+                  Add to Cart
+                </button>
+                <button
+                  class="btn btn-secondary btn-small"
+                  onclick="quickOrder('chips-500g')"
+                  data-en="Buy Now"
+                  data-yo="Ra Bayi"
+                >
+                  Buy Now
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Farm Supplies -->
+          <div class="product-card" data-category="supplies">
+            <div class="product-image">🏠</div>
+            <div class="stock-status in-stock" data-en="Available" data-yo="Wa">
+              Available
+            </div>
+            <div class="product-info">
+              <div
+                class="product-name"
+                data-en="Poultry Pen Setup"
+                data-yo="Eto Ago Adie"
+              >
+                Poultry Pen Setup
+              </div>
+              <div
+                class="product
